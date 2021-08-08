@@ -8,7 +8,7 @@ import (
 
 func main() {
 	opts := mqtt.NewClientOptions()
-	opts.AddBroker("tcp://localhost:1833")
+	opts.AddBroker("tcp://localhost:1883")
 	client := mqtt.NewClient(opts)
 
 	if token := client.Connect(); token.Wait() && token.Error() != nil {
@@ -25,4 +25,3 @@ func main() {
 
 	fmt.Println("Complete publish")
 }
-
