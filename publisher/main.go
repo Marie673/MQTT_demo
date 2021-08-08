@@ -17,7 +17,7 @@ func main() {
 
 	for i := 0; i < 5; i++ {
 		text := fmt.Sprintf("this is msg #%d!", i)
-		token := client.Publish("go-mqtt/sample", 0, false, text)
+		token := client.Publish("net/sample", 0, false, text)
 		token.Wait()
 	}
 

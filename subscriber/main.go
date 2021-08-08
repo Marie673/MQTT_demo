@@ -22,7 +22,7 @@ func main() {
 		log.Fatalf("MQTT error: %s", token.Error())
 	}
 
-	if subscribeToken := client.Subscribe("go-mqtt/sample", 0, handle); subscribeToken.Wait() && subscribeToken.Error() != nil {
+	if subscribeToken := client.Subscribe("net/sample", 0, handle); subscribeToken.Wait() && subscribeToken.Error() != nil {
 		log.Fatal(subscribeToken.Error())
 	}
 
